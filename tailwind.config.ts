@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss"
 
 const config = {
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -18,6 +19,16 @@ const config = {
       },
     },
     extend: {
+        fontSize: {
+    'xs': '12px',
+    'sm': '14px',
+    'base': '16px',
+    'lg': '18px',
+    'xl': '20px',
+    '2xl': '24px',
+    '3xl': '30px',
+    '4xl': '36px',
+  },
       colors: {
         cream: "#f5f4f0",
         taupe: "#d3c7b9",
@@ -86,6 +97,7 @@ const config = {
       },
     },
   },
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config
 
 export default config
