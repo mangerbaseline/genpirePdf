@@ -10,7 +10,7 @@ export const generatePdffromTechpack = async () => {
 
   // Basic styles for PDF pages
   [page1, page2, page3].forEach((page) => {
-    page.style.width = "890px";
+    page.style.width = "1000px";
     page.style.padding = "20px";
     page.style.backgroundColor = "white";
     page.style.position = "fixed";
@@ -154,7 +154,7 @@ const techPackData = {
 
 page1 .innerHTML = `
   <div class="p-2">
-    <div class="border-2 border-[#001F54] border-solid relative p-4 min-h-[1123px]">
+    <div class="border-2 border-[#001F54] border-solid relative p-4 min-h-[1123px] min-w-[794px]">
       <div class="bg-white border-b-4 border-[#001F54] text-center mb-4">
         <h1 class="text-2xl font-bold py-3">Running Shoe Tech Pack</h1>
       </div>
@@ -225,7 +225,14 @@ page1 .innerHTML = `
           </div>
 
           <!-- Packaging -->
-          <div class="mb-6">
+          
+
+        <!-- Right Column -->
+     
+  <!-- Colorways -->
+ 
+ 
+<div class="mb-6">
             <div class="flex justify-start items-center bg-[#001F54] h-[40px]">
               <p class="text-xl font-bold pl-4 pb-4 text-[#fff]">Packaging</p>
             </div>
@@ -239,14 +246,12 @@ page1 .innerHTML = `
     <li><strong>Barcode & Label Placement:</strong> Bottom-right corner</li>
   </ul>
 </div>
-
           </div>
         </div>
 
-        <!-- Right Column -->
-      <div>
-  <!-- Colorways -->
-  <div class="mb-6">
+
+
+ <div class="mb-6 grid grid-cols-2">
     <!-- Heading bar -->
     <div class="flex justify-start items-center bg-[#001F54] h-[40px]">
       <p class="text-xl font-bold pl-4 pb-4 text-[#fff]">Colorways</p>
@@ -289,8 +294,7 @@ page1 .innerHTML = `
   </div>
 </div> 
 
-
-          <!-- Quality Standards -->
+        <!-- Quality Standards -->
           <div class="mb-6">
             <div class="flex justify-start items-center bg-[#001F54] h-[40px]">
               <p class="text-xl font-bold pl-4 pb-4 text-[#fff] ">Quality Standards</p>
@@ -321,59 +325,299 @@ page1 .innerHTML = `
 `;
 
 page2 .innerHTML = `
-  <div class="p-2">
-    <div class="border-2 border-[#001F54] border-solid relative p-4 min-h-[1123px]">
-    
+ <div class="p-4">
+  <div class="border-2 border-[#001F54] border-solid relative p-4 min-h-[1123px]">
 
-      <!-- Product Details Grid -->
-      <div>
-        <h1 class="text-xl font-bold pl-4 py-6 bg-[#001F54] text-[#fff]">Product Photos</h1>
-       <div class="flex flex-row gap-4 space-y-6">
-        <div class="mt-6 rounded-[12px] border border-black p-8 items-center bg-[#f2aa83] space-y-6 w-[150px]">
-          <h1>This is a dummy text</h1>
+    <!-- Product Photos Section -->
+    <div class="mt-8">
+    <div class="text-xl font-bold pl-4 py-1 bg-[#001F54] text-white mb-4 h-[40px]>
+      <h1 class="pb-4">Product Photos</h1>
+      </div>
+      <div class="flex gap-4 mt-4">
+        <!-- Left info box -->
+        <div class="rounded-[12px] border border-black bg-[#f2aa83] w-[150px] p-4 flex items-center justify-center text-center">
+          <p>Add text where relevant directly from the tech-specs</p>
         </div>
-        <div class="flex flex-row gap-8 mt- bg-[#f6f2ef]">
-          <div class="rounded-lg p-2 bg-[#fff]">
-            <img class="w-[200px] h-[200px]" src="/favicon.ico" alt="" />
+
+        <!-- Images -->
+        <div class="flex gap-4 bg-[#f6f2ef] p-4 flex-1 justify-center">
+          <div class="rounded-lg bg-white p-2 flex items-center justify-center">
+            <img class="w-[200px] h-[200px] object-cover" src="/favicon.ico" alt="Front" />
           </div>
-          <div class="rounded-lg p-2 bg-[#fff]">
-            <img class="w-[200px] h-[200px]" src="/favicon.ico" alt="" />
+          <div class="rounded-lg bg-white p-2 flex items-center justify-center">
+            <img class="w-[200px] h-[200px] object-cover" src="/favicon.ico" alt="Back" />
           </div>
-          <div class="rounded-lg p-2 bg-[#fff]">
-            <img class="w-[200px] h-[200px]" src="/favicon.ico" alt="" />
+          <div class="rounded-lg bg-white p-2 flex items-center justify-center">
+            <img class="w-[200px] h-[200px] object-cover" src="/favicon.ico" alt="Side" />
           </div>
         </div>
       </div>
+    </div>
 
-       <div class="mt-8">
-        <h1 class="text-xl font-bold pl-4 py-6 bg-[#001F54] text-[#fff]">Sketches and Measurements</h1>
-       <div class="flex flex-row gap-4 space-y-6">
-        <div class="mt-6 rounded-[12px] border border-black p-8 items-center bg-[#f2aa83] w-[150px]"
-          <h1>This is a dummy text</h1>
+    <!-- Sketches and Measurements Section -->
+    <div class="mt-8">
+    <div class="text-xl font-bold pl-4 py-1 bg-[#001F54] text-white mb-4">
+      <h1 class="pb-4">Sketches and Measurements</h1>
+      </div>
+      <div class="flex gap-4 mt-4">
+        <!-- Left info box -->
+        <div class="rounded-[12px] border border-black bg-[#f2aa83] w-[150px] p-4 flex items-center justify-center text-center">
+          <p>Add text where relevant directly from the tech-specs</p>
         </div>
-        <div class="flex flex-row gap-8 bg-[#f6f2ef]">
-          <div classrounded p-2 bg-[#fff]">
-            <img class="w-[200px] h-[200px]" src="/favicon.ico" alt="" />
+
+        <!-- Images -->
+        <div class="flex gap-4 bg-[#f6f2ef] p-4 flex-1 justify-center">
+          <div class="rounded-lg bg-white p-2 flex items-center justify-center">
+            <img class="w-[200px] h-[200px] object-cover" src="/favicon.ico" alt="Sketch 1" />
           </div>
-          <div class="rounded-lg p-2 bg-[#fff]">
-            <img class="w-[200px] h-[200px]" src="/favicon.ico" alt="" />
+          <div class="rounded-lg bg-white p-2 flex items-center justify-center">
+            <img class="w-[200px] h-[200px] object-cover" src="/favicon.ico" alt="Sketch 2" />
           </div>
-          <div class="rounded-lg p-2 bg-[#fff]">
-            <img class="w-[200px] h-[200px]" src="/favicon.ico" alt="" />
+          <div class="rounded-lg bg-white p-2 flex items-center justify-center">
+            <img class="w-[200px] h-[200px] object-cover" src="/favicon.ico" alt="Sketch 3" />
           </div>
         </div>
+      </div>
+    </div>
+
+     <div class="mt-8">
+    <div class="text-xl font-bold pl-4 py-1 bg-[#001F54] text-white mb-4">
+      <h1 class="pb-4">Technical Specification View</h1>
+      </div>
+      <div class="flex gap-4 mt-4">
+        <!-- Left info box -->
+        <div class="rounded-[12px] border border-black bg-[#f2aa83] w-[150px] p-4 flex items-center justify-center text-center">
+          <p>Add text where relevant directly from the tech-specs</p>
+        </div>
+
+        <!-- Images -->
+        <div class="flex gap-4 bg-[#f6f2ef] p-4 flex-1 justify-center">
+          <div class="rounded-lg bg-white p-2 flex items-center justify-center">
+            <img class="w-auto h-[200px] object-cover" src="/favicon.ico" alt="Sketch 1" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="mt-8">
+    <div class="text-xl font-bold pl-4 py-1 bg-[#001F54] text-white mb-4">
+      <h1 class="pb-4">Construction View</h1>
+      </div>
+      <div class="flex gap-4 mt-4">
+        <!-- Left info box -->
+        <div class="rounded-[12px] border border-black bg-[#f2aa83] w-[150px] p-4 flex items-center justify-center text-center">
+          <p>Add text where relevant directly from the tech-specs</p>
+        </div>
+
+        <!-- Images -->
+        <div class="flex gap-4 bg-[#f6f2ef] p-4 flex-1 justify-center">
+          <div class="rounded-lg bg-white p-2 flex items-center justify-center">
+            <img class="w-auto h-[200px] object-cover" src="/favicon.ico" alt="Sketch 1" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom logo -->
+    <div class="absolute bottom-4 right-4 h-12 w-12">
+      <img src="/favicon.png" alt="Logo" class="h-full w-full object-contain" />
+    </div>
+  </div>
+</div>
+`
+page3.innerHTML=`
+ <div class="p-4">
+   <div class="border-2 border-[#001F54] border-solid relative p-4 min-h-[1123px]">
+<div class="grid grid-cols-1 gap-4 p-4 w-full">
+  <div class="w-full">
+    <!-- Bill of Materials (BOM) -->
+    <div class="border border-gray-300 rounded-lg overflow-x-auto w-full">
+      
+      <!-- Header -->
+      <div class="flex items-center bg-[#001F54] h-12 px-4 w-full">
+        <p class="text-xl font-bold text-white">Bill of Materials (BOM)</p>
       </div>
       
-
-      <div class="absolute bottom-4 right-4 h-12 w-12">
-        <img src="/favicon.png" alt="Logo" class="h-full w-full object-contain" />
+      <!-- Table Wrapper -->
+      <div class="w-full overflow-x-auto">
+        <table class="min-w-full text-sm w-full border-collapse">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="text-left py-2 px-4 font-semibold border-b">Components</th>
+              <th class="text-left py-2 px-4 font-semibold border-b">Materials</th>
+              <th class="text-left py-2 px-4 font-semibold border-b">Specification</th>
+              <th class="text-left py-2 px-4 font-semibold border-b">Quantity</th>
+              <th class="text-left py-2 px-4 font-semibold border-b">Unit cost</th>
+              <th class="text-left py-2 px-4 font-semibold border-b">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b text-center">
+              <td class="py-2 px-2">Body</td>
+              <td class="py-2 px-2">Cotton Canvas</td>
+              <td class="py-2 px-2">12 oz heavyweight</td>
+              <td class="py-2 px-2">05m2</td>
+              <td class="py-2 px-2">3.00 USD/m2</td>
+              <td class="py-2 px-2">Durable and sustainable</td>
+            </tr>
+            <tr class="border-b text-center">
+              <td class="py-2 px-2">Body</td>
+              <td class="py-2 px-2">Cotton Canvas</td>
+              <td class="py-2 px-2">12 oz heavyweight</td>
+              <td class="py-2 px-2">05m2</td>
+              <td class="py-2 px-2">3.00 USD/m2</td>
+              <td class="py-2 px-2">Durable and sustainable</td>
+            </tr>
+            <tr class="border-b text-center">
+              <td class="py-2 px-2">Body</td>
+              <td class="py-2 px-2">Cotton Canvas</td>
+              <td class="py-2 px-2">12 oz heavyweight</td>
+              <td class="py-2 px-2">05m2</td>
+              <td class="py-2 px-2">3.00 USD/m2</td>
+              <td class="py-2 px-2">Durable and sustainable</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
-`;
-// page1.innerHTML=`<div class="border-2 border-[#001F54] border-solid relative p-4'>
+</div>
 
 
+<!-- cost -->
+<div class="grid grid-cols-2 gap-4 p-4">
+
+  <!-- Production Cost -->
+  <div class="border border-gray-300 rounded-lg p-4 space-y-3">
+    <div class="bg-[#001F54]  flex items-center px-4 rounded-t h-[40px]">
+      <p class="text-white pb-4 font-bold text-lg">Production Cost</p>
+    </div>
+    <ul class="list-disc list-inside text-sm space-y-1">
+      <li><strong>Packaging:</strong> $2.50 per unit</li>
+      <li><strong>Labor per Unit:</strong> $3.00</li>
+      <li><strong>Order Quantity:</strong> 500 units</li>
+      <li><strong>Quality Control:</strong> $1.00 per unit</li>
+      <li><strong>Overhead:</strong> $0.75 per unit</li>
+    </ul>
+  </div>
+
+  <!-- Sample Cost -->
+  <div class="border border-gray-300 rounded-lg p-4 space-y-3">
+    <div class="bg-[#001F54] h-[40px] flex items-center px-4 rounded-t">
+      <p class="text-white font-bold pb-4 text-lg">Sample Cost</p>
+    </div>
+    <ul class="list-disc list-inside text-sm space-y-1">
+      <li><strong>Labor:</strong> $50</li>
+      <li><strong>Overhead:</strong> $20</li>
+      <li><strong>Shipping:</strong> $15</li>
+      <li><strong>Materials:</strong> $30</li>
+      <li><strong>Tooling Setup:</strong> $100</li>
+    </ul>
+  </div>
+
+  <!-- Compliance Cost -->
+  <div class="border border-gray-300 rounded-lg p-4 space-y-3">
+    <div class="bg-[#001F54] h-[40px] flex items-center px-4 rounded-t">
+      <p class="text-white font-bold pb-4 text-lg">Compliance Cost</p>
+    </div>
+    <ul class="list-disc list-inside text-sm space-y-1">
+      <li><strong>Testing:</strong> $200</li>
+      <li><strong>Labeling:</strong> $50</li>
+      <li><strong>Certification:</strong> $300</li>
+      <li><strong>Documentation:</strong> $100</li>
+    </ul>
+  </div>
+
+  <!-- Logistics Cost -->
+  <div class="border border-gray-300 rounded-lg  p-4 space-y-3">
+    <div class="bg-[#001F54] h-[40px] flex items-center px-4 rounded-t">
+      <p class="text-white font-bold pb-4 text-lg">Logistics Cost</p>
+    </div>
+    <ul class="list-disc list-inside text-sm space-y-1">
+      <li><strong>Warehousing:</strong> $1.50/unit</li>
+      <li><strong>Domestic Shipping:</strong> $2.00/unit</li>
+      <li><strong>Insurance:</strong> 1.5%</li>
+      <li><strong>Customs Duties:</strong> 5%</li>
+      <li><strong>International Shipping:</strong> $5/unit</li>
+    </ul>
+  </div>
+
+  <!-- Pricing Strategy -->
+  <div class="border border-gray-300 rounded-lg p-4 space-y-3 col-span-2">
+    <div class="bg-[#001F54] h-[40px] flex items-center px-4 rounded-t">
+      <p class="text-white font-bold pb-4 text-lg">Pricing Strategy</p>
+    </div>
+    <ul class="list-disc list-inside text-sm space-y-1">
+      <li><strong>Retail Markup:</strong> 40%</li>
+      <li><strong>Wholesale Markup:</strong> 25%</li>
+    </ul>
+  </div>
+
+  <!-- Income Estimation -->
+  <div class="border border-gray-300 rounded-lg p-4 space-y-3 col-span-2">
+    <div class="bg-[#001F54] h-[40px] flex items-center px-4 rounded-t">
+      <p class="text-white font-bold pb-4 text-lg">Income Estimation</p>
+    </div>
+    <ul class="list-disc list-inside text-sm space-y-1">
+      <li><strong>Monthly Units:</strong> 1000</li>
+      <li><strong>Growth Rate:</strong> 5%</li>
+      <li><strong>Seasonality Factor:</strong> 1.2</li>
+      <li><strong>Market Penetration:</strong> 10%</li>
+    </ul>
+  </div>
+
+  <!-- Total Estimated Cost -->
+  <div class="border border-gray-300 rounded-lg p-4 space-y-3 col-span-2">
+    <div class="bg-[#001F54] h-[40px] flex items-center px-4 rounded-t">
+      <p class="text-white font-bold pb-4 text-lg">Total Estimated Cost</p>
+    </div>
+    <p class="text-sm">This is a combined estimate of production, logistics, compliance, and sampling costs. Actual costs may vary.</p>
+  </div>
+
+</div>
+
+<div class="grid grid-cols-2 gap-4 p-4">
+
+  <!-- Bulk Production 1000 Units -->
+  <div class="border border-gray-300 rounded-lg p-4 space-y-3">
+    <div class="bg-[#001F54] h-[40px] flex items-center px-4 rounded-t">
+      <p class="text-white font-bold pb-4 text-lg">Bulk Production (1000 Units)</p>
+    </div>
+    <ul class="list-disc list-inside text-sm space-y-1">
+      <li><strong>Material Cost:</strong> $3000 - $4000</li>
+      <li><strong>Total Cost for 1000 Units:</strong> $6200 - $8800</li>
+      <li><strong>Unit Cost Breakdown:</strong> $6.20 - $8.80 per unit</li>
+      <li><strong>Economies of Scale Note:</strong> Bulk production benefits from volume discounts, significantly lowering per-unit cost compared to sampling.</li>
+      <li><strong>Quality & Compliance:</strong> $400 - $600</li>
+    </ul>
+  </div>
+
+  <!-- Sample Creation -->
+  <div class="border border-gray-300 rounded-lg p-4 space-y-3">
+    <div class="bg-[#001F54] h-[40px] flex items-center px-4 rounded-t">
+      <p class="text-white font-bold pb-4 text-lg">Sample Creation</p>
+    </div>
+    <ul class="list-disc list-inside text-sm space-y-1">
+      <li><strong>Notes:</strong> Sample creation cost is typically higher per unit due to small batch sizes, international logistics, and development fees.</li>
+      <li><strong>Sample Cost:</strong> $110 - $160</li>
+      <li><strong>Material Cost:</strong> $20 - $30</li>
+      <li><strong>Shipping & Logistics:</strong> $10 - $20</li>
+    </ul>
+  </div>
+
+  <!-- Total Estimated Income / Cost Summary (Full Width) -->
+  <div class="border border-gray-300 rounded-lg p-4 space-y-3 col-span-2">
+    <div class="bg-[#001F54] h-[40px] flex items-center px-4 rounded-t">
+      <p class="text-white font-bold pb-6 text-lg">Cost & Income Summary</p>
+    </div>
+    <p class="text-sm">
+      This summary includes bulk production and sample creation costs. Unit costs are lower in bulk due to economies of scale, whereas samples are more expensive per unit due to smaller batches and additional logistics.
+    </p>
+  </div>
+</div>
+
+          </div>
+          </div`
 // page1.innerHTML=`<div class="border-2 border-[#001F54] border-solid relative p-4'>
 // <p class="text-green-400">elwfh9werhf phwerfhweqrh</p></div>`
 
@@ -517,6 +761,7 @@ page2 .innerHTML = `
   //   `;
   document.body.appendChild(page1);
   document.body.appendChild(page2);
+    document.body.appendChild(page3);
 
   //   let includePage3 = false;
 
@@ -534,7 +779,7 @@ page2 .innerHTML = `
       scrollX: 0,
       scrollY: 0,
     };
-    const pages = [page1, page2];
+    const pages = [page1, page2,page3];
     for (let i = 0; i < pages.length; i++) {
       const canvas = await html2canvas(pages[i], options);
       const imgData = canvas.toDataURL("image/jpeg", 1);
@@ -550,7 +795,7 @@ page2 .innerHTML = `
     console.error("PDF generation failed:", error);
     throw error;
   } finally {
-    [page1, page2].forEach((page) => {
+    [page1, page2,page3].forEach((page) => {
       if (page.parentNode) {
         document.body.removeChild(page);
       }
