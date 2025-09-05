@@ -187,7 +187,7 @@ page1 .innerHTML = `
         <div>
           <!-- Measurements & Tolerance -->
           <div class="mb-6">
-            <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+            <div class="flex justify-start items-center bg-[#001F54] h-[40px]">
               <p class="text-xl font-bold pl-4 pb-4 text-[#fff]">Measurements & Tolerance</p>
             </div>
             <div class="border border-t-0 overflow-x-auto">
@@ -202,22 +202,22 @@ page1 .innerHTML = `
                 </thead>
                 <tbody>
                   <tr class="border-b">
-                    <td class="py-2 px-4">Length</td>
-                    <td class="py-2 px-4">28</td>
-                    <td class="py-2 px-4">cm</td>
-                    <td class="py-2 px-4">±0.5cm</td>
+                    <td class="py-2 pr-2 text-center">Length</td>
+                    <td class="py-2 pr-2 text-center">28</td>
+                    <td class="py-2 pr-2 text-center">cm</td>
+                    <td class="py-2 pr-2 text-center">±0.5cm</td>
                   </tr>
                   <tr class="border-b">
-                    <td class="py-2 px-4">Width</td>
-                    <td class="py-2 px-4">10</td>
-                    <td class="py-2 px-4">cm</td>
-                    <td class="py-2 px-4">±0.2cm</td>
+                    <td class="py-2 pr-2 text-center">Width</td>
+                    <td class="py-2 pr-2 text-center">10</td>
+                    <td class="py-2 pr-2 text-center">cm</td>
+                    <td class="py-2 pr-2 text-center">±0.2cm</td>
                   </tr>
                   <tr class="border-b">
-                    <td class="py-2 px-4">Height</td>
-                    <td class="py-2 px-4">12</td>
-                    <td class="py-2 px-4">cm</td>
-                    <td class="py-2 px-4">±0.3cm</td>
+                    <td class="py-2 pr-2 text-center">Height</td>
+                    <td class="py-2 pr-2 text-center">12</td>
+                    <td class="py-2 pr-2 text-center">cm</td>
+                    <td class="py-2 pr-2 text-center">±0.3cm</td>
                   </tr>
                 </tbody>
               </table>
@@ -226,63 +226,73 @@ page1 .innerHTML = `
 
           <!-- Packaging -->
           <div class="mb-6">
-            <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+            <div class="flex justify-start items-center bg-[#001F54] h-[40px]">
               <p class="text-xl font-bold pl-4 pb-4 text-[#fff]">Packaging</p>
             </div>
-            <div class="border border-t-0 p-4 text-sm leading-6">
-              <ul class="list-disc pl-5 space-y-1">
-                <li><strong>Packaging Type:</strong> Box</li>
-                <li><strong>Material Spec:</strong> Recycled Cardboard</li>
-                <li><strong>Closure Type:</strong> Magnetic Flap</li>
-                <li><strong>Artwork File Reference:</strong> artwork_v1.ai</li>
-                <li><strong>Inner Packaging:</strong> Tissue Wrap</li>
-                <li><strong>Barcode & Label Placement:</strong> Bottom-right corner</li>
-              </ul>
-            </div>
+            <div class="border border-t-0 p-4 text-sm">
+  <ul class="list-disc list-inside ">
+    <li><strong>Packaging Type:</strong> Box</li>
+    <li><strong>Material Spec:</strong> Recycled Cardboard</li>
+    <li><strong>Closure Type:</strong> Magnetic Flap</li>
+    <li><strong>Artwork File Reference:</strong> artwork_v1.ai</li>
+    <li><strong>Inner Packaging:</strong> Tissue Wrap</li>
+    <li><strong>Barcode & Label Placement:</strong> Bottom-right corner</li>
+  </ul>
+</div>
+
           </div>
         </div>
 
         <!-- Right Column -->
-        <div>
-          <!-- Colorways -->
-          <div class="mb-6">
-            <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
-              <p class="text-xl font-bold pl-4 pb-4 text-[#fff] ">Colorways</p>
-            </div>
-            <div class="border border-t-0 p-4 space-y-3">
-              <div>
-                <h3 class="font-semibold text-gray-700">Primary Colors</h3>
-                <div class="flex flex-wrap items-center gap-4 mt-1">
-                  <div class="flex items-center">
-                    <span class="w-4 h-4 rounded-full mr-2 border" style="background-color:#001F54;"></span>
-                    <span class="text-sm">Navy Blue (#001F54)</span>
-                  </div>
-                  <div class="flex items-center">
-                    <span class="w-4 h-4 rounded-full mr-2 border" style="background-color:#FFFFFF;"></span>
-                    <span class="text-sm">White (#FFFFFF)</span>
-                  </div>
-                </div>
-              </div>
+      <div>
+  <!-- Colorways -->
+  <div class="mb-6">
+    <!-- Heading bar -->
+    <div class="flex justify-start items-center bg-[#001F54] h-[40px]">
+      <p class="text-xl font-bold pl-4 pb-4 text-[#fff]">Colorways</p>
+    </div>
 
-              <div>
-                <h3 class="font-semibold text-gray-700">Accent Colors</h3>
-                <div class="flex flex-wrap items-center gap-4 mt-1">
-                  <div class="flex items-center">
-                    <span class="w-4 h-4 rounded-full mr-2 border" style="background-color:#FF5733;"></span>
-                    <span class="text-sm">Orange (#FF5733)</span>
-                  </div>
-                  <div class="flex items-center">
-                    <span class="w-4 h-4 rounded-full mr-2 border" style="background-color:#C0C0C0;"></span>
-                    <span class="text-sm">Gray (#C0C0C0)</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <!-- First block -->
+    <div class="border border-t-0 p-4 space-y-3">
+      <div>
+        <h3 class="font-semibold text-gray-700">Primary Colors</h3>
+        <div class="flex flex-wrap items-center gap-4 mt-1">
+          <div class="flex items-center gap-2">
+            <span class="w-4 h-4 mt-4 rounded-full border flex-shrink-0" style="background-color:#001F54;"></span>
+            <span class="text-sm">Navy Blue (#001F54)</span>
           </div>
+          <div class="flex items-center gap-2">
+            <span class="w-4 h-4 mt-4 rounded-full border flex-shrink-0" style="background-color:#FFFFFF;"></span>
+            <span class="text-sm">White (#FFFFFF)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second block -->
+    <div class="border border-t-0 p-4 space-y-3">
+      <div>
+        <h3 class="font-semibold text-gray-700">Secondary Colors</h3>
+        <div class="flex flex-wrap items-center gap-4 mt-1">
+          <div class="flex items-center gap-2">
+            <span class="w-4 h-4 mt-4 rounded-full border flex-shrink-0" style="background-color:#001F54;"></span>
+            <span class="text-sm">Navy Blue (#001F54)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-4 h-4 mt-4 rounded-full border flex-shrink-0" style="background-color:#FFFFFF;"></span>
+            <span class="text-sm">White (#FFFFFF)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div> 
+
 
           <!-- Quality Standards -->
           <div class="mb-6">
-            <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+            <div class="flex justify-start items-center bg-[#001F54] h-[40px]">
               <p class="text-xl font-bold pl-4 pb-4 text-[#fff] ">Quality Standards</p>
             </div>
             <div class="border border-t-0 p-4 text-sm">
@@ -292,8 +302,8 @@ page1 .innerHTML = `
 
           <!-- Sizes -->
           <div class="mb-6">
-            <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
-              <p class="text-xl font-bold pl-4 pb-4">Sizes</p>
+            <div class="flex justify-start items-center bg-[#001F54] h-[40px]">
+              <p class="text-xl font-bold pl-4 pb-4 text-[#fff]">Sizes</p>
             </div>
             <div class="border border-t-0 p-4 text-sm">
               <p>Increment of 0.5cm for each size up.</p>
@@ -310,6 +320,57 @@ page1 .innerHTML = `
   </div>
 `;
 
+page2 .innerHTML = `
+  <div class="p-2">
+    <div class="border-2 border-[#001F54] border-solid relative p-4 min-h-[1123px]">
+    
+
+      <!-- Product Details Grid -->
+      <div>
+        <h1 class="text-xl font-bold pl-4 py-6 bg-[#001F54] text-[#fff]">Product Photos</h1>
+       <div class="flex flex-row gap-4 space-y-6">
+        <div class="mt-6 rounded-[12px] border border-black p-8 items-center bg-[#f2aa83] space-y-6 w-[150px]">
+          <h1>This is a dummy text</h1>
+        </div>
+        <div class="flex flex-row gap-8 mt- bg-[#f6f2ef]">
+          <div class="rounded-lg p-2 bg-[#fff]">
+            <img class="w-[200px] h-[200px]" src="/favicon.ico" alt="" />
+          </div>
+          <div class="rounded-lg p-2 bg-[#fff]">
+            <img class="w-[200px] h-[200px]" src="/favicon.ico" alt="" />
+          </div>
+          <div class="rounded-lg p-2 bg-[#fff]">
+            <img class="w-[200px] h-[200px]" src="/favicon.ico" alt="" />
+          </div>
+        </div>
+      </div>
+
+       <div class="mt-8">
+        <h1 class="text-xl font-bold pl-4 py-6 bg-[#001F54] text-[#fff]">Sketches and Measurements</h1>
+       <div class="flex flex-row gap-4 space-y-6">
+        <div class="mt-6 rounded-[12px] border border-black p-8 items-center bg-[#f2aa83] w-[150px]"
+          <h1>This is a dummy text</h1>
+        </div>
+        <div class="flex flex-row gap-8 bg-[#f6f2ef]">
+          <div classrounded p-2 bg-[#fff]">
+            <img class="w-[200px] h-[200px]" src="/favicon.ico" alt="" />
+          </div>
+          <div class="rounded-lg p-2 bg-[#fff]">
+            <img class="w-[200px] h-[200px]" src="/favicon.ico" alt="" />
+          </div>
+          <div class="rounded-lg p-2 bg-[#fff]">
+            <img class="w-[200px] h-[200px]" src="/favicon.ico" alt="" />
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="absolute bottom-4 right-4 h-12 w-12">
+        <img src="/favicon.png" alt="Logo" class="h-full w-full object-contain" />
+      </div>
+    </div>
+  </div>
+`;
 // page1.innerHTML=`<div class="border-2 border-[#001F54] border-solid relative p-4'>
 
 
@@ -320,7 +381,7 @@ page1 .innerHTML = `
 //  page2.innerHTML = `
 // <div class="p-2">
 //   <div class="border-2 border-[#001F54] border-solid relative p-4">
-//     <!-- Header -->
+//     <!-- Header -->>
 //     <div class="bg-white border-b-4 border-[#001F54] text-center mb-4 -mt-4 -mx-4">
 //       <h1 class="text-2xl font-bold py-3">Running Shoe Tech Pack</h1>
 //     </div>
