@@ -7,9 +7,9 @@ export const generatePdffromTechpack = async () => {
   const page1 = document.createElement("div");
   const page2 = document.createElement("div");
   const page3 = document.createElement("div");
-
+  const page4=document.createElement("div");
   // Basic styles for PDF pages
-  [page1, page2, page3].forEach((page) => {
+  [page1, page2, page3,page4].forEach((page) => {
     page.style.width = "1000px";
     page.style.padding = "20px";
     page.style.backgroundColor = "white";
@@ -151,10 +151,9 @@ const techPackData = {
 };
 
 // ✅ Insert into page1
-
 page1 .innerHTML = `
   <div class="p-2">
-    <div class="border-2 border-[#001F54] border-solid relative p-4 min-h-[1123px] min-w-[794px]">
+    <div class="border-2 border-[#001F54] border-solid relative p-4 min-h-[1123px]">
       <div class="bg-white border-b-4 border-[#001F54] text-center mb-4">
         <h1 class="text-2xl font-bold py-3">Running Shoe Tech Pack</h1>
       </div>
@@ -162,33 +161,33 @@ page1 .innerHTML = `
       <!-- Product Details Grid -->
       <div>
         <h1 class="text-xl font-bold pl-4 py-6 bg-[#001F54] text-[#fff]">Product Details</h1>
-        <div class="grid grid-cols-2 gap-x-10 border-b-2 border-[#001F54] pb-4 p-3">
-          <div class="border-b-2 border-gray-300 pb-2">
-            <p class="font-bold text-sm text-gray-800">Product Description</p>
+        <div class="grid grid-cols-2 gap-x-4 border-b-2 border-[#001F54] pb-4 p-3">
+          <div class="border-b-2 border-gray-300 pb-2 ">
+            <p class="font-semibold text-sm text-gray-800">Product Description</p>
             <p class="text-gray-700 text-sm">A lightweight, breathable running shoe designed for comfort and performance.</p>
           </div>
           <div class="border-b-2 border-gray-300 pb-2">
-            <p class="font-bold text-sm text-gray-800">Product Notes</p>
+            <p class="font-semibold text-sm text-gray-800">Product Notes</p>
             <p class="text-gray-700 text-sm">Reinforced stitching at stress points. Waterproof upper mesh.</p>
           </div>
           <div class="pt-2">
-            <p class="font-bold text-sm text-gray-800">Product Category</p>
+            <p class="font-semibold text-sm text-gray-800">Product Category</p>
             <p class="text-gray-700 text-sm">Footwear / Sports</p>
           </div>
           <div class="pt-2">
-            <p class="font-bold text-sm text-gray-800">Intended Market Age Range</p>
+            <p class="font-semibold text-sm text-gray-800">Intended Market Age Range</p>
             <p class="text-gray-700 text-sm">18–35 years</p>
           </div>
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-x-4 pt-4">
+      <div class="grid grid-cols-2 gap-x-4 mt-4 ">
         <!-- Left Column -->
         <div>
           <!-- Measurements & Tolerance -->
-          <div class="mb-6">
-            <div class="flex justify-start items-center bg-[#001F54] h-[40px]">
-              <p class="text-xl font-bold pl-4 pb-4 text-[#fff]">Measurements & Tolerance</p>
+          <div class="mb-6 space-y-6">
+            <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+              <p class="text-xl font-bold pl-4 pb-4 text-[#fff] ">Measurements & Tolerance</p>
             </div>
             <div class="border border-t-0 overflow-x-auto">
               <table class="min-w-full text-sm">
@@ -202,22 +201,22 @@ page1 .innerHTML = `
                 </thead>
                 <tbody>
                   <tr class="border-b">
-                    <td class="py-2 pr-2 text-center">Length</td>
-                    <td class="py-2 pr-2 text-center">28</td>
-                    <td class="py-2 pr-2 text-center">cm</td>
-                    <td class="py-2 pr-2 text-center">±0.5cm</td>
+                    <td class="py-2 px-4">Length</td>
+                    <td class="py-2 px-4">28</td>
+                    <td class="py-2 px-4">cm</td>
+                    <td class="py-2 px-4">±0.5cm</td>
                   </tr>
                   <tr class="border-b">
-                    <td class="py-2 pr-2 text-center">Width</td>
-                    <td class="py-2 pr-2 text-center">10</td>
-                    <td class="py-2 pr-2 text-center">cm</td>
-                    <td class="py-2 pr-2 text-center">±0.2cm</td>
+                    <td class="py-2 px-4">Width</td>
+                    <td class="py-2 px-4">10</td>
+                    <td class="py-2 px-4">cm</td>
+                    <td class="py-2 px-4">±0.2cm</td>
                   </tr>
                   <tr class="border-b">
-                    <td class="py-2 pr-2 text-center">Height</td>
-                    <td class="py-2 pr-2 text-center">12</td>
-                    <td class="py-2 pr-2 text-center">cm</td>
-                    <td class="py-2 pr-2 text-center">±0.3cm</td>
+                    <td class="py-2 px-4">Height</td>
+                    <td class="py-2 px-4">12</td>
+                    <td class="py-2 px-4">cm</td>
+                    <td class="py-2 px-4">±0.3cm</td>
                   </tr>
                 </tbody>
               </table>
@@ -225,78 +224,64 @@ page1 .innerHTML = `
           </div>
 
           <!-- Packaging -->
-          
+          <div class="mb-6">
+            <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+              <p class="text-xl font-bold pl-4 py-1 text-[#fff] pb-4">Packaging</p>
+            </div>
+            <div class="border border-t-0 p-4 text-sm leading-6">
+              <ul class="list-disc pl-5 space-y-1">
+                <li><strong>Packaging Type:</strong> Box</li>
+                <li><strong>Material Spec:</strong> Recycled Cardboard</li>
+                <li><strong>Closure Type:</strong> Magnetic Flap</li>
+                <li><strong>Artwork File Reference:</strong> artwork_v1.ai</li>
+                <li><strong>Inner Packaging:</strong> Tissue Wrap</li>
+                <li><strong>Barcode & Label Placement:</strong> Bottom-right corner</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
         <!-- Right Column -->
-     
-  <!-- Colorways -->
- 
- 
-<div class="mb-6">
-            <div class="flex justify-start items-center bg-[#001F54] h-[40px]">
-              <p class="text-xl font-bold pl-4 pb-4 text-[#fff]">Packaging</p>
+        <div>
+          <!-- Colorways -->
+          <div class="mb-6 space-y-6">
+            <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+              <p class="text-xl font-bold pl-4 py-1 text-[#fff] pb-4">Colorways</p>
             </div>
-            <div class="border border-t-0 p-4 text-sm">
-  <ul class="list-disc list-inside ">
-    <li><strong>Packaging Type:</strong> Box</li>
-    <li><strong>Material Spec:</strong> Recycled Cardboard</li>
-    <li><strong>Closure Type:</strong> Magnetic Flap</li>
-    <li><strong>Artwork File Reference:</strong> artwork_v1.ai</li>
-    <li><strong>Inner Packaging:</strong> Tissue Wrap</li>
-    <li><strong>Barcode & Label Placement:</strong> Bottom-right corner</li>
-  </ul>
-</div>
+            <div class="border border-t-0 p-4 space-y-3">
+              <div>
+                <h3 class="font-semibold text-gray-700">Primary Colors</h3>
+                <div class="flex flex-wrap items-center gap-4 mt-1">
+                  <div class="flex items-center">
+                    <span class="w-4 h-4 rounded-full mr-2 border" style="background-color:#001F54;"></span>
+                    <span class="text-sm">Navy Blue (#001F54)</span>
+                  </div>
+                  <div class="flex items-center">
+                    <span class="w-4 h-4 rounded-full mr-2 border" style="background-color:#FFFFFF;"></span>
+                    <span class="text-sm">White (#FFFFFF)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-gray-700">Accent Colors</h3>
+                <div class="flex flex-wrap items-center gap-4 mt-1">
+                  <div class="flex items-center">
+                    <span class="w-4 h-4 rounded-full mr-2 border" style="background-color:#FF5733;"></span>
+                    <span class="text-sm">Orange (#FF5733)</span>
+                  </div>
+                  <div class="flex items-center">
+                    <span class="w-4 h-4 rounded-full mr-2 border" style="background-color:#C0C0C0;"></span>
+                    <span class="text-sm">Gray (#C0C0C0)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-
-
- <div class="mb-6 grid grid-cols-2">
-    <!-- Heading bar -->
-    <div class="flex justify-start items-center bg-[#001F54] h-[40px]">
-      <p class="text-xl font-bold pl-4 pb-4 text-[#fff]">Colorways</p>
-    </div>
-
-    <!-- First block -->
-    <div class="border border-t-0 p-4 space-y-3">
-      <div>
-        <h3 class="font-semibold text-gray-700">Primary Colors</h3>
-        <div class="flex flex-wrap items-center gap-4 mt-1">
-          <div class="flex items-center gap-2">
-            <span class="w-4 h-4 mt-4 rounded-full border flex-shrink-0" style="background-color:#001F54;"></span>
-            <span class="text-sm">Navy Blue (#001F54)</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="w-4 h-4 mt-4 rounded-full border flex-shrink-0" style="background-color:#FFFFFF;"></span>
-            <span class="text-sm">White (#FFFFFF)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Second block -->
-    <div class="border border-t-0 p-4 space-y-3">
-      <div>
-        <h3 class="font-semibold text-gray-700">Secondary Colors</h3>
-        <div class="flex flex-wrap items-center gap-4 mt-1">
-          <div class="flex items-center gap-2">
-            <span class="w-4 h-4 mt-4 rounded-full border flex-shrink-0" style="background-color:#001F54;"></span>
-            <span class="text-sm">Navy Blue (#001F54)</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="w-4 h-4 mt-4 rounded-full border flex-shrink-0" style="background-color:#FFFFFF;"></span>
-            <span class="text-sm">White (#FFFFFF)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div> 
-
-        <!-- Quality Standards -->
+          <!-- Quality Standards -->
           <div class="mb-6">
-            <div class="flex justify-start items-center bg-[#001F54] h-[40px]">
+            <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
               <p class="text-xl font-bold pl-4 pb-4 text-[#fff] ">Quality Standards</p>
             </div>
             <div class="border border-t-0 p-4 text-sm">
@@ -306,8 +291,8 @@ page1 .innerHTML = `
 
           <!-- Sizes -->
           <div class="mb-6">
-            <div class="flex justify-start items-center bg-[#001F54] h-[40px]">
-              <p class="text-xl font-bold pl-4 pb-4 text-[#fff]">Sizes</p>
+            <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+              <p class="text-xl font-bold pl-4 pb-4">Sizes</p>
             </div>
             <div class="border border-t-0 p-4 text-sm">
               <p>Increment of 0.5cm for each size up.</p>
@@ -578,7 +563,25 @@ page3.innerHTML=`
 
 <div class="grid grid-cols-2 gap-4 p-4">
 
-  <!-- Bulk Production 1000 Units -->
+  <!-- Total Estimated Income / Cost Summary (Full Width) -->
+  <div class="border border-gray-300 rounded-lg p-4 space-y-3 col-span-2">
+    <div class="bg-[#001F54] h-[40px] flex items-center px-4 rounded-t">
+      <p class="text-white font-bold pb-6 text-lg">Cost & Income Summary</p>
+    </div>
+    <p class="text-sm">
+      This summary includes bulk production and sample creation costs. Unit costs are lower in bulk due to economies of scale, whereas samples are more expensive per unit due to smaller batches and additional logistics.
+    </p>
+  </div>
+</div>
+
+          </div>
+          </div
+`;
+
+page4.innerHTML=`
+<div class="p-2">
+    <div class="border-2 border-[#001F54] border-solid relative p-4 min-h-[1123px]">
+      <!-- Bulk Production 1000 Units -->
   <div class="border border-gray-300 rounded-lg p-4 space-y-3">
     <div class="bg-[#001F54] h-[40px] flex items-center px-4 rounded-t">
       <p class="text-white font-bold pb-4 text-lg">Bulk Production (1000 Units)</p>
@@ -604,20 +607,127 @@ page3.innerHTML=`
       <li><strong>Shipping & Logistics:</strong> $10 - $20</li>
     </ul>
   </div>
-
-  <!-- Total Estimated Income / Cost Summary (Full Width) -->
-  <div class="border border-gray-300 rounded-lg p-4 space-y-3 col-span-2">
-    <div class="bg-[#001F54] h-[40px] flex items-center px-4 rounded-t">
-      <p class="text-white font-bold pb-6 text-lg">Cost & Income Summary</p>
-    </div>
-    <p class="text-sm">
-      This summary includes bulk production and sample creation costs. Unit costs are lower in bulk due to economies of scale, whereas samples are more expensive per unit due to smaller batches and additional logistics.
-    </p>
+    <!-- Production & Logistics -->
+<div class="my-6">
+  <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+    <p class="text-xl font-bold pl-4 pb-4">Production & Logistics</p>
+  </div>
+  <div class="border border-t-0 p-4 text-sm space-y-2">
+    <p><strong>MOQ:</strong> 500 units per colorway</p>
+    <p><strong>Lead Time:</strong> 45 days after PPS approval</p>
+    <p><strong>Sample Requirements:</strong> 2 PPS, 1 for client approval</p>
   </div>
 </div>
 
-          </div>
-          </div`
+
+
+<!-- construction -->
+<!-- Construction Features -->
+<div class="mb-6">
+  <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+    <p class="text-xl font-bold pl-4 pb-4">Construction Features</p>
+  </div>
+  <div class="border border-t-0 p-4 text-sm space-y-4">
+    <!-- Feature 1 -->
+    <div>
+      <p class="font-semibold text-gray-700">Sensor Integration</p>
+      <p>Sensors are embedded within the platform to provide accurate readings.</p>
+    </div>
+
+    <!-- Feature 2 -->
+    <div>
+      <p class="font-semibold text-gray-700">Display Attachment</p>
+      <p>LCD display is seamlessly integrated into the body for a clean look.</p>
+    </div>
+
+    <!-- Feature 3 -->
+    <div>
+      <p class="font-semibold text-gray-700">Tempered Glass Protection</p>
+      <p>Tempered glass panels provide durability and scratch resistance.</p>
+    </div>
+
+    <!-- Feature 4 -->
+    <div>
+      <p class="font-semibold text-gray-700">Ergonomic Platform</p>
+      <p>Designed for optimal foot placement and comfort during usage.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Hardware Components -->
+<div class="mb-6">
+  <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+    <p class="text-xl font-bold pl-4 pb-4">Hardware Components</p>
+  </div>
+  <div class="border border-t-0 p-4 text-sm space-y-3">
+    <p class="text-gray-700">
+      The Smart Weight Meter includes precision electronic components for accurate weight measurement, featuring an LCD display for easy reading.
+    </p>
+    <ul class="list-disc list-inside pl-5 space-y-1">
+      <li>LCD display</li>
+      <li>Precision strain gauges</li>
+      <li>Tempered glass platform</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- Materials -->
+<div class="mb-6">
+  <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+    <p class="text-xl font-bold pl-4 pb-4">Materials</p>
+  </div>
+  <div class="border border-t-0 overflow-x-auto">
+    <table class="min-w-full text-sm">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="text-left py-2 px-4 font-semibold">Component</th>
+          <th class="text-left py-2 px-4 font-semibold">Material</th>
+          <th class="text-left py-2 px-4 font-semibold">Specification</th>
+          <th class="text-left py-2 px-4 font-semibold">Unit Cost</th>
+          <th class="text-left py-2 px-4 font-semibold">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b">
+          <td class="py-2 px-4">Platform</td>
+          <td class="py-2 px-4">Tempered Glass</td>
+          <td class="py-2 px-4">6 mm thickness, load capacity up to 180 kg</td>
+          <td class="py-2 px-4">5.00 USD/m²</td>
+          <td class="py-2 px-4">Durable and scratch-resistant surface</td>
+        </tr>
+        <tr class="border-b">
+          <td class="py-2 px-4">Body</td>
+          <td class="py-2 px-4">ABS Plastic</td>
+          <td class="py-2 px-4">High-impact resistance, UV-stabilized</td>
+          <td class="py-2 px-4">2.00 USD/kg</td>
+          <td class="py-2 px-4">Lightweight and strong for long-lasting use</td>
+        </tr>
+        <tr class="border-b">
+          <td class="py-2 px-4">Sensors</td>
+          <td class="py-2 px-4">High-Precision Strain Gauges</td>
+          <td class="py-2 px-4">Accuracy within ±0.1 kg</td>
+          <td class="py-2 px-4">1.50 USD/unit</td>
+          <td class="py-2 px-4">Ensures precise weight measurements</td>
+        </tr>
+        <tr class="border-b">
+          <td class="py-2 px-4">Display</td>
+          <td class="py-2 px-4">LCD Screen</td>
+          <td class="py-2 px-4">Easy to read in various lighting conditions</td>
+          <td class="py-2 px-4">3.00 USD/unit</td>
+          <td class="py-2 px-4">Clear visibility in any environment</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+    </div>
+    </div>
+`;
 // page1.innerHTML=`<div class="border-2 border-[#001F54] border-solid relative p-4'>
 // <p class="text-green-400">elwfh9werhf phwerfhweqrh</p></div>`
 
@@ -762,6 +872,8 @@ page3.innerHTML=`
   document.body.appendChild(page1);
   document.body.appendChild(page2);
     document.body.appendChild(page3);
+   document.body.appendChild(page4);
+
 
   //   let includePage3 = false;
 
@@ -779,7 +891,7 @@ page3.innerHTML=`
       scrollX: 0,
       scrollY: 0,
     };
-    const pages = [page1, page2,page3];
+    const pages = [page1, page2,page3,page4];
     for (let i = 0; i < pages.length; i++) {
       const canvas = await html2canvas(pages[i], options);
       const imgData = canvas.toDataURL("image/jpeg", 1);
