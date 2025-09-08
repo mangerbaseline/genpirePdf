@@ -315,9 +315,10 @@ page2 .innerHTML = `
 
     <!-- Product Photos Section -->
     <div class="mt-8">
-    <div class="text-xl font-bold pl-4 py-1 bg-[#001F54] text-white mb-4 h-[40px]>
-      <h1 class="pb-4">Product Photos</h1>
-      </div>
+    <div class="text-xl font-bold pl-4 pb-8 pt-1 bg-[#001F54] text-white mb-4">
+  <h1>Product Photos</h1>
+</div>
+
       <div class="flex gap-4 mt-4">
         <!-- Left info box -->
         <div class="rounded-[12px] border border-black bg-[#f2aa83] w-[150px] p-4 flex items-center justify-center text-center">
@@ -328,7 +329,7 @@ page2 .innerHTML = `
         <div class="flex gap-4 bg-[#f6f2ef] p-4 flex-1 justify-center">
           <div class="rounded-lg bg-white p-2 flex items-center justify-center">
             <img class="w-[200px] h-[200px] object-cover" src="/favicon.ico" alt="Front" />
-          </div>
+          </div>d
           <div class="rounded-lg bg-white p-2 flex items-center justify-center">
             <img class="w-[200px] h-[200px] object-cover" src="/favicon.ico" alt="Back" />
           </div>
@@ -420,7 +421,7 @@ page3.innerHTML=`
       
       <!-- Header -->
       <div class="flex items-center bg-[#001F54] h-12 px-4 w-full">
-        <p class="text-xl font-bold text-white">Bill of Materials (BOM)</p>
+        <p class="text-xl font-bold text-white pb-2">Bill of Materials (BOM)</p>
       </div>
       
       <!-- Table Wrapper -->
@@ -609,7 +610,7 @@ page4.innerHTML=`
   </div>
     <!-- Production & Logistics -->
 <div class="my-6">
-  <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+  <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px] rounded-t">
     <p class="text-xl font-bold pl-4 pb-4">Production & Logistics</p>
   </div>
   <div class="border border-t-0 p-4 text-sm space-y-2">
@@ -624,7 +625,7 @@ page4.innerHTML=`
 <!-- construction -->
 <!-- Construction Features -->
 <div class="mb-6">
-  <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+  <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px] rounded-t">
     <p class="text-xl font-bold pl-4 pb-4">Construction Features</p>
   </div>
   <div class="border border-t-0 p-4 text-sm space-y-4">
@@ -658,7 +659,7 @@ page4.innerHTML=`
 
 <!-- Hardware Components -->
 <div class="mb-6">
-  <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+  <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px] rounded-t">
     <p class="text-xl font-bold pl-4 pb-4">Hardware Components</p>
   </div>
   <div class="border border-t-0 p-4 text-sm space-y-3">
@@ -676,7 +677,7 @@ page4.innerHTML=`
 
 <!-- Materials -->
 <div class="mb-6">
-  <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px]">
+  <div class="flex justify-start items-center bg-[#001F54] text-white h-[40px] rounded-t">
     <p class="text-xl font-bold pl-4 pb-4">Materials</p>
   </div>
   <div class="border border-t-0 overflow-x-auto">
